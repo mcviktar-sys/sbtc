@@ -57,6 +57,10 @@ jobs:
         with:
           platforms: arm64
 
+      - name: Setup Buildx
+        id: setup_buildx
+        uses: stacks-sbtc/actions/docker/setup-buildx-action@main
+
       ## Checkout the branch of the release provided.
       ## This requires that a release branch exists for the tag.
       - name: Checkout Repository
